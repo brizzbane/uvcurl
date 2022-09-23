@@ -118,7 +118,7 @@ class cURLHTTPClient(object):
 
         curl.setopt(pycurl.HTTPHEADER,
                     ["%s: %s" % (native_str(k), native_str(v))
-                     for k, v in request.headers.iteritems()])
+                     for k, v in request.headers.items()])
 
         curl.setopt(pycurl.HEADERFUNCTION,
                    functools.partial(self._curl_header_callback,
